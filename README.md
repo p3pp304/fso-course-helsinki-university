@@ -10,3 +10,11 @@ This repository contains my theoretical notes and exercise solutions for the **F
 | **1** | **Introduction to React** | 📅 Upcoming | - |
 | **2** | Communicating with server | 📅 Upcoming | - |
 | **3** | Programming a server with NodeJS and Express | 📅 Upcoming | - |
+
+## 🛠️ Main Tech Stack
+- **React**
+- **Node.js**
+- **MongoDB**
+- **GraphQL**
+- **TypeScript**
+- **Docker**
