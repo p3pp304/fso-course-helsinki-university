@@ -3,11 +3,11 @@ sequenceDiagram
     participant browser
     participant server
 
-    Note over browser: L'utente scrive la nota e preme "Salva"
+    Note over browser: The user writes the note and presses "Save"
 
     browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
     activate server
-    Note left of server: Il server salva la nuova nota nell'array
+    Note left of server: The server saves the new note in the array
     server-->>browser: HTTP 302 Found (Redirect to /notes)
     deactivate server
 
@@ -26,12 +26,12 @@ sequenceDiagram
     server-->>browser: JavaScript file
     deactivate server
 
-    Note over browser: Il browser esegue il JS che richiede i dati aggiornati
+    Note over browser: The browser runs the JS that requests the updated data
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: [{ "content": "x", "date": "2026-..." }, ... ]
     deactivate server
 
-    Note over browser: Il browser esegue la callback che renderizza le note
+    Note over browser: The browser runs the callback that renders the notes
 ```
