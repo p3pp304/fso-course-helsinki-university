@@ -1,0 +1,17 @@
+```mermaid
+sequenceDiagram
+    participant browser
+    participant server
+
+    Note over browser: The user writes "x" and presses "Save"
+    
+    Note over browser: The JS code adds the note to the local list <br/>and redraws the page (Client-side rendering)
+
+    browser->>server: POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+    activate server
+    Note right of browser: JSON: { "content": "x", "date": "2026-03-15..." }
+    server-->>browser: 201 Created
+    deactivate server
+
+    Note over browser: No further requests! The browser stays on the same page.
+    ```
